@@ -1,11 +1,11 @@
 class CreateAddresses < ActiveRecord::Migration
   def change
     create_table :addresses do |t|
-      t.string :street
-      t.string :city
-      t.string :state
-      t.integer :zip
-      t.string :type
+      t.string :name
+      t.string :address
+      t.string :entity_type
+      t.string :description
+      t.string :service
       t.float :latitude
       t.float :longitude
 
