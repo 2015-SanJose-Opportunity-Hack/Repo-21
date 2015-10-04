@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :zones
-  root 'zones#index'
+  root 'maps#index'
   resources :addresses
 
   resources :maps, only: [:show, :index]
