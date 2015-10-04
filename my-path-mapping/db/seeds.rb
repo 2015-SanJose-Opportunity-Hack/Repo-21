@@ -8,8 +8,8 @@
 
 
 
-Address.create(street: "581 Hayes St", city: "San Francisco", state: "CA", zip: "94102")
-Address.create(street: "5017 Geary Blvd",  city:  "San Francisco", state: "CA", zip: "94118")
-Address.create(street: "3275 22nd St",  city: "San Francisco", state: "CA", zip: "94110")
-Address.create(street: "205 Hugo St",  city: "San Francisco", state: "CA", zip: "94122")
-Address.create(street: "345 3rd St",  city: "San Francisco", state: "CA", zip: "94107")
+Address.create(address: "581 Hayes St, San Francisco CA, 94102")
+Address.create(address: "5017 Geary Blvd, San Francisc CA, 94118")
+Address.create(address: "3275 22nd St, San Francisco CA, 94110")
+Address.create(address: "205 Hugo St, San Francisco CA, 94122")
+Address.create(address: "345 3rd St, San Francisco CA, 94107")
