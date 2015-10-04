@@ -26,8 +26,14 @@
     <%= f.text_field :address, :class => 'form-control' %>
   </div>
   <div class="field">
-    <%= f.label :entity_type %><br>
-    <%= f.text_field :entity_type, :class => 'form-control' %>
+      <%= f.radio_button :entity_type, "Bank" %>
+<%= f.label :entity_type, "Bank", :value => "Bank"  %>
+              <%= f.radio_button :entity_type, "Credit Union" %>
+        <%= f.label :entity_type, "Credit Union", :value => "Credit Union"  %>
+  <%= f.radio_button :entity_type, "Check Cashing Service" %>
+        <%= f.label :entity_type, "Check Cashing Service", :value => "Check Cashing Service"  %>
+    <%# f.label :entity_type %><br>
+    <%# f.text_field :entity_type, :class => 'form-control' %>
   </div><br>
   <div class="actions">
     <%= f.submit :class => 'btn btn-default'%>
