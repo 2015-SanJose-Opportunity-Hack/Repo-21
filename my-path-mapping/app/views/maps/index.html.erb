@@ -28,7 +28,7 @@
   <script>
 
   L.mapbox.accessToken = 'pk.eyJ1IjoibXlwYXRobWFwIiwiYSI6ImNpZmJsazE1NTJtbWRyc203azFteDZjM3MifQ.4bHjuFSY_Y-xvCN4V4nZeg';
-  var map = L.mapbox.map('map', 'mapbox.streets')
+  var map = L.mapbox.map('map', 'mypathmap.nk4i9p5e')
   .setView([37.7577,-122.4376], 13);
 
   var myLayer = L.mapbox.featureLayer().addTo(map);
@@ -41,7 +41,7 @@
           coordinates: [<%=address.longitude%>, <%=address.latitude%>]
         },
         properties: {
-          title: "testing",
+          title: "<%=address.name%>",
           address: "<%=address.address%>",
           'marker-size': 'large',
           'marker-color': <% if address.entity_type == "Bank" %>"#0000FF"<% elsif address.entity_type == "Credit Union" %>"#00FF00"<% else %>"#FF0000"<% end %>,
