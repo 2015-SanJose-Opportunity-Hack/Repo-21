@@ -1,19 +1,40 @@
 <p id="notice"><%= notice %></p>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-4">
 
-<p>
-  <strong>Name:</strong>
-  <%= @zone.name %>
-</p>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-8">
+<div class="panel panel-default">
+  <div class="panel-heading">List of Zones</div>
+  <div class="panel-body">
+    <div class="table-responsive">
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>City</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+<tbody>
+  <tr>
+    <td>  <%= @zone.name %> </td>
+    <td> <%= @zone.description %> </td>
+    <td> <%= @zone.city %> </td>
+  </tr>
+</tbody>
+</table>
+</div>
+</div>
 
-<p>
-  <strong>Description:</strong>
-  <%= @zone.description %>
-</p>
-
-<p>
-  <strong>City:</strong>
-  <%= @zone.city %>
-</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 
 <%= link_to 'Edit', edit_zone_path(@zone) %> |
 <%= link_to 'Back', zones_path %>
