@@ -6,6 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+Zone.create(name: "North of Mission", description: "Multicultural", city: "San Francisco")
 
 
 #Bayview##
