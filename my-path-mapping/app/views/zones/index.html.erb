@@ -11,42 +11,13 @@
     <div class="debug span-3-d col h-3"> </div>
   </div>
 
-    <!-- start of listings -->
-      <div class="col-xs-12 col-sm-6 col-md-8 debug col span-12-d h-45">
-        <h1 class="ta-cen">Listing Zones</h1>
-        <div class=""><%= link_to 'New Zone', new_zone_path, :class => 'btn btn-primary btn-lg btn-block bg-green' %></div>
-        <div class="panel panel-default">
-          <div class="panel-body">
-            <div class="table-responsive">
-        <table class="table">
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Description</th>
-              <th>City</th>
-              <th colspan="3"></th>
-            </tr>
-          </thead>
-        <tbody>
-          <% @zones.each do |zone| %>
-            <tr>
-              <td><%= link_to zone.name, addresses_path, :class => 'btn btn-default' %></td>
-              <td><%= zone.description %></td>
-              <td><%= zone.city %></td>
-              <td>
-                <%= link_to 'Edit', edit_zone_path(zone), :class => 'btn btn-default' %>
-                <%= link_to 'Destroy', zone, :class => 'btn btn-default', method: :delete, data: { confirm: 'Are you sure?' } %>
-              </td>
-            </tr>
-          <% end %>
-        </tbody>
-        <p id="notice"><%= notice %></p>
-      </table>
-    </div>
-  </div>
+<div class="debug span-11-d col mt-5 container">
+  <%= link_to 'New Address', new_address_path, :class => "btn btn-primary btn-lg btn-block bg-green" %>
+  <br>
+  <%= link_to 'Maps', maps_path, :class => "btn btn-primary btn-lg btn-block bg-green" %>
+
 </div>
-</div>
-<!-- zone table end -->
+
 
 
 
