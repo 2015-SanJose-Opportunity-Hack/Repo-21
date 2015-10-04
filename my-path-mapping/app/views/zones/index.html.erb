@@ -1,51 +1,88 @@
 <div class="wrapper">
-<p id="notice"><%= notice %></p>
 
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-4">
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+    <li data-target="#myCarousel" data-slide-to="3"></li>
+  </ol>
 
-      </div>
-      <div class="col-xs-12 col-sm-6 col-md-8">
-<h1>Listing Zones</h1>
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <img src="img_chania.jpg" alt="Chania">
+    </div>
 
-<div class="panel panel-default">
-  <div class="panel-heading">List of Zones</div>
-  <div class="panel-body">
-    <div class="table-responsive">
-<table class="table">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>City</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+    <div class="item">
+      <img src="img_chania2.jpg" alt="Chania">
+    </div>
 
-  <tbody>
-    <% @zones.each do |zone| %>
-      <tr>
-        <td><%= zone.name %></td>
-        <td><%= zone.description %></td>
-        <td><%= zone.city %></td>
-        <td><%= link_to 'Show', zone, :class => 'btn btn-default' %>
-          <%= link_to 'Edit', edit_zone_path(zone), :class => 'btn btn-default' %>
-          <%= link_to 'Destroy', zone, :class => 'btn btn-default', method: :delete, data: { confirm: 'Are you sure?' } %>
-        </td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+    <div class="item">
+      <img src="img_flower.jpg" alt="Flower">
+    </div>
 
+    <div class="item">
+      <img src="img_flower2.jpg" alt="Flower">
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+
+      <div class="col-xs-12 col-sm-6 col-md-8 debug ml">
+        <h1 class="ta-cen">Listing Zones</h1>
+        <div class=""><%= link_to 'New Zone', new_zone_path, :class => 'btn btn-primary btn-lg btn-block' %></div>
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <div class="table-responsive">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Description</th>
+              <th>City</th>
+              <th colspan="3"></th>
+            </tr>
+          </thead>
+        <tbody>
+          <% @zones.each do |zone| %>
+            <tr>
+              <td><%= link_to zone.name, zone, :class => 'btn btn-default' %></td>
+              <td><%= zone.description %></td>
+              <td><%= zone.city %></td>
+              <td>
+                <%= link_to 'Edit', edit_zone_path(zone), :class => 'btn btn-default' %>
+                <%= link_to 'Destroy', zone, :class => 'btn btn-default', method: :delete, data: { confirm: 'Are you sure?' } %>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+        <p id="notice"><%= notice %></p>
+      </table>
     </div>
   </div>
 </div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<br>
+</div><!-- zone table end -->
 
-<%= link_to 'New Zone', new_zone_path %>
+
+
+
+
+
+</div>
+<!-- wrapper end -->
+
+
+
+
