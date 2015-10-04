@@ -6,7 +6,6 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-
 Address.create(name: string, address: string, entity_type: string, description: string, service: string)
 
 #Bayview##
@@ -46,7 +45,7 @@ Address.create(name:"Mission Check Cashers", address:"2815 24th St, San Francisc
 Address.create(name:"Money Mart", address:"500 Valencia St, San Francisco, CA 94110", entity_type:"Check Cashing Service")
 Address.create(name:"Check n Go", address:"3001 Mission St, San Francisco, CA 94110", entity_type:"Check Cashing Service")
 Address.create(name:"C K Check Cashing", address:"3100 24th St, San Francisco, CA 94110", entity_type:"Check Cashing Service")
-Address.create(name:"Lucky Check Cashing", address:"1028 Mission St, San Francisco, CA 94103", entity_type:"Check Cashing Service"
+Address.create(name:"Lucky Check Cashing", address:"1028 Mission St, San Francisco, CA 94103", entity_type:"Check Cashing Service")
 
 ##North Beach##
 #Bank
@@ -68,6 +67,28 @@ Address.create(name:"San Francisco BPR Fed Cu", address: "201 Mission St Ste 210
 Address.create(name:"SF Fire Credit Union", address: "12 Mint Plaza, San Francisco, CA 94103", entity_type:"Credit Union")
 Address.create(name:"Golden 1 Credit Union", address: "2298 Lombard St, San Francisco, CA 94123", entity_type:"Credit Union")
 Address.create(name:"Lee Federal Credit Union", address: "915 Grant Ave, San Francisco, CA 94108", entity_type:"Credit Union")
+
+
+# Additional Seeds from Shirley
+
+Address.create(name: "Army Check Cashing", address:"3011 Mission St, San Francisco, CA 94110 ", entity_type: "Check Cashing Service")
+Address.create(name: "California Check Cashing Stores", address:"2531 Mission St, San Francisco, CA 94110", entity_type: "Check Cashing Service")
+Address.create(name: "Money Mart", address:"4919 Mission St, San Francisco, CA 94112", entity_type: "Check Cashing Service")
+Address.create(name: "California Check Cashing Stores", address:"5129 Mission St, San Francisco, CA 94112", entity_type: "Check Cashing Service")
+Address.create(name: "ACE Cash Express", address:"1104 Polk St, San Francisco, CA 94109", entity_type: "Check Cashing Service")
+Address.create(name: "Lucky Check Cashing", address:"1028 Mission Street, San Francisco, California 94103 ", entity_type: "Check Cashing Service")
+Address.create(name: "Lucky Check Cashing", address:"4873 Mission Street, San Francisco, California 94112 ", entity_type: "Check Cashing Service")
+Address.create(name: "Lucky Check Cashing", address:"953 Mission St., San Francisco, California 94103 ", entity_type: "Check Cashing Service")
+Address.create(name: "California Check Cashing Stores", address:"9 Kearny St., San Francisco, CA  94108", entity_type: "Check Cashing Service")
+Address.create(name: "Money Mart", address:"4919 Mission St, San Francisco, CA 94112", entity_type: "Check Cashing Service")
+Address.create(name: "Money Mart", address:"964 Market St, San Francisco, CA 94102", entity_type: "Check Cashing Service")
+Address.create(name: "Money Mart", address:"500 Valencia St, San Francisco, CA 94110", entity_type: "Check Cashing Service")
+Address.create(name: "Money Mart", address:"1040 Polk St, San Francisco, CA 94109", entity_type: "Check Cashing Service")
+Address.create(name: "Money Mart", address:"1567 Fillmore St, San Francisco, CA 94115", entity_type: "Check Cashing Service")
+Address.create(name: "Money Mart", address:"3000 San Bruno Ave, San Francisco, CA 94134", entity_type: "Check Cashing Service")
+Address.create(name: "Money Mart", address:"7400 Mission St, Daly City, CA 94014", entity_type: "Check Cashing Service")
+Address.create(name: "Polk Check Cashing", address:"1104 Polk St, San Francisco, CA", entity_type: "Check Cashing Service")
+
 
 
 
