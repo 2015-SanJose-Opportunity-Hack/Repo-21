@@ -28,7 +28,7 @@ class AddressesController < ApplicationController
 
     respond_to do |format|
       if @address.save
-        format.html { redirect_to @address, notice: 'Address was successfully created.' }
+        format.html { redirect_to new_address_path, notice: 'Address was successfully created.' }
         format.json { render :show, status: :created, location: @address }
       else
         format.html { render :new }

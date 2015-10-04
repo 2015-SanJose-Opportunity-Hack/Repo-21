@@ -1,12 +1,12 @@
-<div class="wrapper debug">
-  <div class="span-4-d debug h-45 col">
-  </div>
+<div class="wrapper debug flex-center">
+
   <p id="notice"><%= notice %></p>
 
     <!--start of list--->
-      <div class="col-xs-12 col-sm-6 col-md-8 debug col span-8-d h-45">
+      <div class="col-xs-12 col-sm-6 col-md-8 debug col span-8-d h-45 flex-center">
           <h1 class="ta-cen">Listing Address</h1>
-              <div class=""><%= link_to 'New Address', new_address_path, :class => 'btn btn-primary btn-lg btn-block ' %></div>
+          <%= link_to 'New Address', new_address_path, :class => "btn btn-primary btn-lg btn-block bg-green" %>
+
 
               <!-- panel starts -->
                   <div class="panel panel-default">
@@ -31,7 +31,6 @@
                                         <td><%= address.name %></td>
                                         <td><%= address.address %></td>
                                         <td><%= address.entity_type %></td>
-                                        <td><%= link_to 'Show', address, :class => 'btn btn-default'  %></td>
                                         <td><%= link_to 'Edit', edit_address_path(address), :class => 'btn btn-default'  %></td>
                                         <td><%= link_to 'Destroy', address, :class => 'btn btn-default' , method: :delete, data: { confirm: 'Are you sure?' } %></td>
                                       </tr>
@@ -48,5 +47,3 @@
       </div>
 </div>
 <!-- wrapper ends -->
-
-<%= link_to 'New Address', new_address_path %>
