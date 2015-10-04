@@ -83,6 +83,26 @@ Address.create(name:"Lee Federal Credit Union", address: "915 Grant Ave, San Fra
 
 
 
+# additional seed file
+Address.create(name: "Army Check Cashing", address:"3011 Mission St, San Francisco, CA 94110 ", entity_type: "Check Cashing Service")
+Address.create(name: "California Check Cashing Stores", address:"2531 Mission St, San Francisco, CA 94110", entity_type: "Check Cashing Service")
+Address.create(name: "Money Mart", address:"4919 Mission St, San Francisco, CA 94112", entity_type: "Check Cashing Service")
+Address.create(name: "California Check Cashing Stores", address:"5129 Mission St, San Francisco, CA 94112", entity_type: "Check Cashing Service")
+Address.create(name: "ACE Cash Express", address:"1104 Polk St, San Francisco, CA 94109", entity_type: "Check Cashing Service")
+Address.create(name: "Lucky Check Cashing", address:"1028 Mission Street, San Francisco, California 94103 ", entity_type: "Check Cashing Service")
+sleep 5
+Address.create(name: "Lucky Check Cashing", address:"4873 Mission Street, San Francisco, California 94112 ", entity_type: "Check Cashing Service")
+Address.create(name: "Lucky Check Cashing", address:"953 Mission St., San Francisco, California 94103 ", entity_type: "Check Cashing Service")
+Address.create(name: "California Check Cashing Stores", address:"9 Kearny St., San Francisco, CA  94108", entity_type: "Check Cashing Service")
+Address.create(name: "Money Mart", address:"4919 Mission St, San Francisco, CA 94112", entity_type: "Check Cashing Service")
+Address.create(name: "Money Mart", address:"964 Market St, San Francisco, CA 94102", entity_type: "Check Cashing Service")
+Address.create(name: "Money Mart", address:"500 Valencia St, San Francisco, CA 94110", entity_type: "Check Cashing Service")
+Address.create(name: "Money Mart", address:"1040 Polk St, San Francisco, CA 94109", entity_type: "Check Cashing Service")
+sleep 5
+Address.create(name: "Money Mart", address:"1567 Fillmore St, San Francisco, CA 94115", entity_type: "Check Cashing Service")
+Address.create(name: "Money Mart", address:"3000 San Bruno Ave, San Francisco, CA 94134", entity_type: "Check Cashing Service")
+Address.create(name: "Money Mart", address:"7400 Mission St, Daly City, CA 94014", entity_type: "Check Cashing Service")
+Address.create(name: "Polk Check Cashing", address:"1104 Polk St, San Francisco, CA", entity_type: "Check Cashing Service")
 
 
 
