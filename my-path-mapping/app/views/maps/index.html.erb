@@ -21,39 +21,28 @@
 
   var myLayer = L.mapbox.featureLayer().addTo(map);
 
-//   var geojson = {
-//     type: 'FeatureCollection',
-//     features: [{
-//         type: 'Feature',
-//         properties: {
-//             title: 'Dev BootCamp',
-//             'marker-color': '#f86767',
-//             'marker-size': 'large',
-//             'marker-symbol': 'star',
-//             url: 'http://en.wikipedia.org/wiki/Washington,_D.C.'
-//         },
-//         geometry: {
-//             type: 'Point',
-//             coordinates: [-122.4222929,37.7651455]
-//         }
-//     },
-//     {
-//         type: 'Feature',
-//         properties: {
-//             title: 'Cream',
-//             'marker-color': '#7ec9b1',
-//             'marker-size': 'large',
-//             'marker-symbol': 'star',
-//             url: 'http://en.wikipedia.org/wiki/Baltimore'
-//         },
-//         geometry: {
-//             type: 'Point',
-//             coordinates: [-122.4222929, 37.7651455]
-//         }
-//     }]
-// };
+  var geojson = [<% @addresses.each do |address| %>
+      {
+        type: "Feature",
+        geometry: {
+          type: "Point",
+          coordinates: [<%=address.longitude%>, <%=address.latitude%>]
+        },
+        properties: {
+          title: "testing",
+          address: "<%=address.address%>",
+          'marker-size': 'large',
+          'marker-color': '#BE9A6B',
+          'marker-symbol': 'star'
+        }
+      }<% if address != @addresses[-1] %>,<% end %>
+   <% end %>]
 
-// myLayer.setGeoJSON(geojson);
+console.log(geojson)
+
+myLayer.setGeoJSON(geojson);
+
+
 
 </script>
 </body>
