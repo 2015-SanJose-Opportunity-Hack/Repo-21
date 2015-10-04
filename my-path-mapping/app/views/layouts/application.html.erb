@@ -8,10 +8,25 @@
 </head>
 <body>
   <div id="wrapper">
-    <nav class="navbar navbar-default navbar-static-top bg-gray bd-1b h-6 row">
-      <div class="  flex-center debug mt-1">
-        <a href="/"><img src="/assets/logo3.png"></a>
-        <%= link_to "Map", maps_path %>
+
+    <nav class="navbar navbar-default navbar-static-top bg-gray">
+      <div class="page-header  flex-center">
+
+        <div class="span-4-d debug">
+        </div>
+        <div class="span-4-d debug flex-center">
+        <a href="/"><img src="/assets/logo2.png"></a>
+        </div>
+
+        <div class="span-4-d flex-center debug">
+          <ul class="nav navbar-nav">
+          <li><%= link_to "Map", maps_path, :class => "testing" %></li>
+          <li><%= link_to "New Address", new_address_path %></li>
+          <li><%= link_to "", maps_path %></li>
+        </ul>
+      </div>
+
+
      </div>
 
     </nav>
