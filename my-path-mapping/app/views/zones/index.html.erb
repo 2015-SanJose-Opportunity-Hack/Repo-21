@@ -1,8 +1,19 @@
+<div class="wrapper">
 <p id="notice"><%= notice %></p>
 
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4">
+
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-8">
 <h1>Listing Zones</h1>
 
-<table>
+<div class="panel panel-default">
+  <div class="panel-heading">List of Zones</div>
+  <div class="panel-body">
+    <div class="table-responsive">
+<table class="table">
   <thead>
     <tr>
       <th>Name</th>
@@ -18,14 +29,23 @@
         <td><%= zone.name %></td>
         <td><%= zone.description %></td>
         <td><%= zone.city %></td>
-        <td><%= link_to 'Show', zone %></td>
-        <td><%= link_to 'Edit', edit_zone_path(zone) %></td>
-        <td><%= link_to 'Destroy', zone, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', zone, :class => 'btn btn-default' %>
+          <%= link_to 'Edit', edit_zone_path(zone), :class => 'btn btn-default' %>
+          <%= link_to 'Destroy', zone, :class => 'btn btn-default', method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 <br>
 
 <%= link_to 'New Zone', new_zone_path %>

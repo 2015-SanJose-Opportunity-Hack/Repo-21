@@ -15,3 +15,5 @@
 //= require turbolinks
 //= require_tree .
 //= require mapbox.js
+//= require jquery
+//= require bootstrap-sprockets
