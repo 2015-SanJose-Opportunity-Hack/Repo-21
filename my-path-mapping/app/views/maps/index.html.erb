@@ -2,13 +2,25 @@
 <html>
 <head>
   <meta charset=utf-8 />
-  <title>A simple map</title>
+  <title>My Path Mapping</title>
 
   <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
   <script src='https://api.mapbox.com/mapbox.js/v2.2.2/mapbox.js'></script>
   <link href='https://api.mapbox.com/mapbox.js/v2.2.2/mapbox.css' rel='stylesheet' />
+<style>
+  body {
+    margin:0;
+    padding:0;
+  }
 
-
+  #map {
+    position:absolute;
+    top:22%;
+    bottom:0;
+    width:100%;
+    height: 80%;
+  }
+</style>
 </head>
 <body>
 
@@ -16,8 +28,8 @@
   <script>
 
   L.mapbox.accessToken = 'pk.eyJ1IjoibXlwYXRobWFwIiwiYSI6ImNpZmJsazE1NTJtbWRyc203azFteDZjM3MifQ.4bHjuFSY_Y-xvCN4V4nZeg';
-  var map = L.mapbox.map('map', 'mapbox.streets')
-  .setView([37.7577,-122.4376], 13);
+  var map = L.mapbox.map('map', 'mypathmap.nk4i9p5e')
+  .setView([37.7577,-122.4376], 12);
 
   var myLayer = L.mapbox.featureLayer().addTo(map);
 
@@ -29,14 +41,18 @@
           coordinates: [<%=address.longitude%>, <%=address.latitude%>]
         },
         properties: {
-          title: "testing",
+          title: "<%=address.name%>",
           address: "<%=address.address%>",
           'marker-size': 'large',
-          'marker-color': '#BE9A6B',
-          'marker-symbol': 'star'
+          'marker-color': <% if address.entity_type == "Bank" %>"#0000FF"<% elsif address.entity_type == "Credit Union" %>"#00FF00"<% else %>"#FF0000"<% end %>,
+          'marker-symbol': <% if address.entity_type == "Bank" %>"b"<% elsif address.entity_type == "Credit Union" %>"u"<% else %>"c"<% end %>,
         }
       }<% if address != @addresses[-1] %>,<% end %>
    <% end %>]
+
+   // #FF0000  red  cash
+   // #0000FF  blue bank
+   // #00FF00  green credit union
 
 console.log(geojson)
 
