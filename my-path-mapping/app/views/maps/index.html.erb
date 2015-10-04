@@ -21,9 +21,7 @@
 
   var myLayer = L.mapbox.featureLayer().addTo(map);
 
-  var geojson = ;
-
-//   {
+//   var geojson = {
 //     type: 'FeatureCollection',
 //     features: [{
 //         type: 'Feature',
@@ -36,7 +34,7 @@
 //         },
 //         geometry: {
 //             type: 'Point',
-//             coordinates: [-122.3972145, 37.7845852]
+//             coordinates: [<%= address.longitude %>, <%= address.latitude %>]
 //         }
 //     },
 //     {
@@ -55,7 +53,7 @@
 //     }]
 // };
 
-myLayer.setGeoJSON(geojson);
+// myLayer.setGeoJSON(geojson);
 
 </script>
 </body>
