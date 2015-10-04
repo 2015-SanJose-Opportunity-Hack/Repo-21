@@ -4,7 +4,8 @@ class MapsController < ApplicationController
     @addresses = Address.all
     @geojson = []
 
-    render 'index', layout: false
+    # render 'index', layout: false
+    render 'index'
 	end
 
 	def show
