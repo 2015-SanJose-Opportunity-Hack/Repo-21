@@ -9,7 +9,3 @@
 
 
 Address.create(address: "581 Hayes St, San Francisco CA, 94102")
-Address.create(address: "5017 Geary Blvd, San Francisc CA, 94118")
-Address.create(address: "3275 22nd St, San Francisco CA, 94110")
-Address.create(address: "205 Hugo St, San Francisco CA, 94122")
-Address.create(address: "345 3rd St, San Francisco CA, 94107")
