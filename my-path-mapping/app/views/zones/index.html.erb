@@ -1,13 +1,13 @@
 <div class="wrapper debug">
 
-  <div class="span-4-d debug h-45 col">
+  <div class="span-12-d debug h-15 col bg-lgreen ta-cen">
     <p>description</p>
-  </div>g
+  </div>
 
     <!-- start of listings -->
-      <div class="col-xs-12 col-sm-6 col-md-8 debug col span-8-d h-45">
+      <div class="col-xs-12 col-sm-6 col-md-8 debug col span-12-d h-45">
         <h1 class="ta-cen">Listing Zones</h1>
-        <div class=""><%= link_to 'New Zone', new_zone_path, :class => 'btn btn-primary btn-lg btn-block ' %></div>
+        <div class=""><%= link_to 'New Zone', new_zone_path, :class => 'btn btn-primary btn-lg btn-block bg-green' %></div>
         <div class="panel panel-default">
           <div class="panel-body">
             <div class="table-responsive">
@@ -23,7 +23,7 @@
         <tbody>
           <% @zones.each do |zone| %>
             <tr>
-              <td><%= link_to zone.name, zone, :class => 'btn btn-default' %></td>
+              <td><%= link_to zone.name, addresses_path, :class => 'btn btn-default' %></td>
               <td><%= zone.description %></td>
               <td><%= zone.city %></td>
               <td>
@@ -48,7 +48,3 @@
 
 </div>
 <!-- wrapper end -->
-
-
-
-
