@@ -1,18 +1,62 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset=utf-8 />
-<title>A simple map</title>
+  <meta charset=utf-8 />
+  <title>A simple map</title>
 
-<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-<script src='https://api.mapbox.com/mapbox.js/v2.2.2/mapbox.js'></script>
-<link href='https://api.mapbox.com/mapbox.js/v2.2.2/mapbox.css' rel='stylesheet' />
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+  <script src='https://api.mapbox.com/mapbox.js/v2.2.2/mapbox.js'></script>
+  <link href='https://api.mapbox.com/mapbox.js/v2.2.2/mapbox.css' rel='stylesheet' />
 
 
 </head>
 <body>
 
-<div id='map'></div>
+  <div id='map'></div>
+  <script>
 
+  L.mapbox.accessToken = 'pk.eyJ1IjoibXlwYXRobWFwIiwiYSI6ImNpZmJsazE1NTJtbWRyc203azFteDZjM3MifQ.4bHjuFSY_Y-xvCN4V4nZeg';
+  var map = L.mapbox.map('map', 'mapbox.streets')
+  .setView([37.7577,-122.4376], 13);
+
+  var myLayer = L.mapbox.featureLayer().addTo(map);
+
+  var geojson = ;
+
+//   {
+//     type: 'FeatureCollection',
+//     features: [{
+//         type: 'Feature',
+//         properties: {
+//             title: 'Dev BootCamp',
+//             'marker-color': '#f86767',
+//             'marker-size': 'large',
+//             'marker-symbol': 'star',
+//             url: 'http://en.wikipedia.org/wiki/Washington,_D.C.'
+//         },
+//         geometry: {
+//             type: 'Point',
+//             coordinates: [-122.3972145, 37.7845852]
+//         }
+//     },
+//     {
+//         type: 'Feature',
+//         properties: {
+//             title: 'Cream',
+//             'marker-color': '#7ec9b1',
+//             'marker-size': 'large',
+//             'marker-symbol': 'star',
+//             url: 'http://en.wikipedia.org/wiki/Baltimore'
+//         },
+//         geometry: {
+//             type: 'Point',
+//             coordinates: [-122.4222929, 37.7651455]
+//         }
+//     }]
+// };
+
+myLayer.setGeoJSON(geojson);
+
+</script>
 </body>
 </html>
