@@ -22442,3 +22442,88 @@ Completed 200 OK in 300ms (Views: 299.6ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/assets/logo3.png" for ::1 at 2015-10-05 10:08:24 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-05 22:57:36 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ZonesController#index as HTML
+  Rendered zones/index.html.erb within layouts/application (2.5ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /Users/tomlee/Desktop/mypath-map/app/assets/stylesheets/main.css.scss to /Users/tomlee/Desktop/mypath-map/app/assets/stylesheets/main.scss. (called from _app_views_layouts_application_html_erb__1463408932668294886_70365228022960 at /Users/tomlee/Desktop/mypath-map/app/views/layouts/application.html.erb:5)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /Users/tomlee/Desktop/mypath-map/app/assets/stylesheets/main.css.scss to /Users/tomlee/Desktop/mypath-map/app/assets/stylesheets/main.scss. (called from _app_views_layouts_application_html_erb__1463408932668294886_70365228022960 at /Users/tomlee/Desktop/mypath-map/app/views/layouts/application.html.erb:5)
+Completed 200 OK in 3973ms (Views: 3971.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-9e2d116cec54d82c6b6924c8aec64d28dfa933653fcd7b353ede8f5a71fb3439.css?body=1" for 127.0.0.1 at 2015-10-05 22:57:40 -0700
+
+
+Started GET "/assets/logo3.png" for 127.0.0.1 at 2015-10-05 22:57:40 -0700
+
+
+Started GET "/maps" for 127.0.0.1 at 2015-10-05 22:57:42 -0700
+Processing by MapsController#index as HTML
+  [1m[35mAddress Load (6.8ms)[0m  SELECT "addresses".* FROM "addresses"
+  Rendered maps/index.html.erb within layouts/application (29.1ms)
+Completed 200 OK in 160ms (Views: 134.8ms | ActiveRecord: 16.4ms)
+
+
+Started GET "/assets/logo3.png" for 127.0.0.1 at 2015-10-05 22:57:42 -0700
+
+
+Started GET "/addresses/new" for 127.0.0.1 at 2015-10-05 22:57:46 -0700
+Processing by AddressesController#new as HTML
+  Rendered addresses/_form.html.erb (28.8ms)
+  Rendered addresses/new.html.erb within layouts/application (33.5ms)
+Completed 200 OK in 160ms (Views: 159.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logo3.png" for 127.0.0.1 at 2015-10-05 22:57:46 -0700
+
+
+Started GET "/maps" for 127.0.0.1 at 2015-10-05 22:57:49 -0700
+Processing by MapsController#index as HTML
+  [1m[36mAddress Load (0.4ms)[0m  [1mSELECT "addresses".* FROM "addresses"[0m
+  Rendered maps/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 161ms (Views: 160.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/logo3.png" for 127.0.0.1 at 2015-10-05 22:57:49 -0700
+
+
+Started GET "/addresses/new" for 127.0.0.1 at 2015-10-05 22:57:56 -0700
+Processing by AddressesController#new as HTML
+  Rendered addresses/_form.html.erb (3.6ms)
+  Rendered addresses/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 124ms (Views: 123.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logo3.png" for 127.0.0.1 at 2015-10-05 22:57:57 -0700
+
+
+Started POST "/addresses" for 127.0.0.1 at 2015-10-05 22:58:04 -0700
+Processing by AddressesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uY5vFe7uhMfg/lTGLNoG0UJn2fxgBDepQqRIF8I92LJKSOo9nb0J6RmGtCjaEnNv85uPxzW7dGEOQYkcGb9y7w==", "address"=>{"name"=>"SFO", "address"=>"SFO, San Francisco, CA", "entity_type"=>"Bank"}, "commit"=>"Create Address"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (19.2ms)[0m  [1mINSERT INTO "addresses" ("address", "entity_type", "name", "latitude", "longitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["address", "SFO, San Francisco, CA"], ["entity_type", "Bank"], ["name", "SFO"], ["latitude", 37.6213129], ["longitude", -122.3789554], ["created_at", "2015-10-06 05:58:04.624638"], ["updated_at", "2015-10-06 05:58:04.624638"]]
+  [1m[35m (1.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/addresses/new
+Completed 302 Found in 640ms (ActiveRecord: 21.1ms)
+
+
+Started GET "/addresses/new" for 127.0.0.1 at 2015-10-05 22:58:04 -0700
+Processing by AddressesController#new as HTML
+  Rendered addresses/_form.html.erb (2.3ms)
+  Rendered addresses/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 127ms (Views: 126.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logo3.png" for 127.0.0.1 at 2015-10-05 22:58:04 -0700
+
+
+Started GET "/maps" for 127.0.0.1 at 2015-10-05 22:58:06 -0700
+Processing by MapsController#index as HTML
+  [1m[36mAddress Load (0.5ms)[0m  [1mSELECT "addresses".* FROM "addresses"[0m
+  Rendered maps/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 122ms (Views: 120.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/logo3.png" for 127.0.0.1 at 2015-10-05 22:58:06 -0700
